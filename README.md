@@ -1,6 +1,6 @@
 # thor_llm
 
-**End-to-end runbook** to starts a working setup with Qwen3-Coder-Next-NVFP4 on Jetson Thor.
+**End-to-end runbook** to start a working setup with Qwen3-Coder-Next-NVFP4 on Jetson Thor.
 
 ---
 
