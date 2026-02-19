@@ -60,6 +60,8 @@ print("download complete")
 PY'
 ```
 
+Note that current vllm:latest-jetson-thor is [r38.3-arm64-sbsa-cu130-24.04](https://ghcr.io/nvidia-ai-iot/vllm:r38.3-arm64-sbsa-cu130-24.04): try using this tag if newer images are not compatible with this workflow.
+
 Verify shards exist on host:
 
 ```bash
