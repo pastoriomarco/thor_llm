@@ -7,6 +7,7 @@ Runbooks for serving LLMs on Jetson Thor with persistent Hugging Face and runtim
 - `models/qwen3-coder-next-nvfp4`: `GadflyII/Qwen3-Coder-Next-NVFP4` flow. Current version uses the NVIDIA container directly; previous derived-image workflow is preserved at the end of that README.
 - `models/qwen3.5-35b-a3b-nvfp4`: `Kbenkhaled/Qwen3.5-35B-A3B-NVFP4` flow (vendor image, unified HF cache layout).
 - `models/qwen3.5-122b-a10b-nvfp4-resharded`: `patrickbdevaney/qwen-3.5-122b-a10b-nvfp4-resharded` flow (persistent download + optimized serve flags for Thor).
+- `models/qwen3.5-27b-fp8`: `Qwen/Qwen3.5-27B-FP8` flow (persistent download + vision/tool-calling/MTP serve configuration).
 
 ## Shared host setup (once)
 
