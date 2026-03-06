@@ -43,7 +43,7 @@ docker run --rm -it \
     --quantization compressed-tensors \
     --attention-backend FLASHINFER \
     --language-model-only \
-    --gpu-memory-utilization 0.85 \
+    --gpu-memory-utilization 0.9 \
     --kv-cache-dtype fp8 \
     --max-num-seqs 2 \
     --max-num-batched-tokens 4096

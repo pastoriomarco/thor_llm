@@ -51,8 +51,8 @@ docker run --rm -it \
     --enable-auto-tool-choice \
     --tool-call-parser qwen3_coder \
     --speculative-config '{"method":"qwen3_next_mtp","num_speculative_tokens":2}' \
-    --gpu-memory-utilization 0.85 \
-    --max-num-seqs 2
+    --gpu-memory-utilization 0.9 \
+    --max-num-seqs 1
 ```
 
 ## 3) Verify model id

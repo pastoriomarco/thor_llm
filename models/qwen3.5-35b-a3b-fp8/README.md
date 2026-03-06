@@ -52,6 +52,7 @@ docker run --rm -it \
     --tool-call-parser qwen3_coder \
     --speculative-config '{"method":"qwen3_next_mtp","num_speculative_tokens":2}' \
     --gpu-memory-utilization 0.9 \
+    --kv-cache-dtype fp8 \
     --max-num-seqs 2
 ```
 
