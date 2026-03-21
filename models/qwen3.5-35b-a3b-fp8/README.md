@@ -55,7 +55,13 @@ docker run --rm -it \
     --max-num-seqs 1
 ```
 
-### FP8 KV CACHE, 2 SEQ
+### FP8 KV CACHE, 64K CONTEXT, 20 SEQ
+
+Measured on Thor with:
+- `Available KV cache memory: 56.81 GiB`
+- `GPU KV cache size: 1,353,408 tokens`
+
+That fits `20 x 65,536 = 1,310,720` tokens with margin.
 
 ```bash
 IMAGE=ghcr.io/nvidia-ai-iot/vllm:0.16.0-g15d76f74e-r38.2-arm64-sbsa-cu130-24.04 && \
@@ -73,14 +79,14 @@ docker run --rm -it \
     --download-dir /data/models/huggingface/hub \
     --served-model-name Qwen3.5-35B-A3B-FP8 \
     --tensor-parallel-size 1 \
-    --max-model-len 262144 \
+    --max-model-len 65536 \
     --reasoning-parser qwen3 \
     --enable-auto-tool-choice \
     --tool-call-parser qwen3_coder \
     --speculative-config '{"method":"qwen3_next_mtp","num_speculative_tokens":2}' \
-    --gpu-memory-utilization 0.9 \
+    --gpu-memory-utilization 0.8 \
     --kv-cache-dtype fp8 \
-    --max-num-seqs 2
+    --max-num-seqs 20
 ```
 
 ## 3) Verify model id
